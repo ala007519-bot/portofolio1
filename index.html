@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>A’la | Portofolio</title>
+  <link rel="stylesheet" href="style.css?v=52">
+</head>
+<body>
+
+  <nav class="nav" aria-label="Navigasi utama">
+    <a href="#home" class="on">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="face" aria-hidden="true">
+    <span class="face-eye left"></span>
+    <span class="face-eye right"></span>
+    <span class="face-mouth"></span>
+    <i></i>
+  </div>
+
+  <!-- 1. HOME (DENGAN TRANSISI SCROLL WELCOME) -->
+  <section id="home" class="home">
+    <div class="mount"></div>
+    <div class="home-sticky">
+      <div class="welcome-banner" id="welcomeBanner">
+        <h1>WELCOME TO MY<br>PORTFOLIO</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT -->
+  <section id="about" class="about contour">
+    <div class="wrap">
+      <h2 class="sec-heading reveal">About Me</h2>
+      <div class="hero">
+        <div class="reveal d1">
+          <div class="hi">Hi, I'm <span>Abd.A’la</span></div>
+          <a class="btn" href="cv.pdf" download>📄 View CV</a>
+        </div>
+        <div class="photo reveal d2" id="profilePhoto">
+          <img src="foto-profil.png" alt="Foto profil A’la">
+          <div class="profile-reveal" aria-hidden="true">
+            <img class="profile-character" src="images/about-hover-character.png?v=3" alt="">
+          </div>
+        </div>
+        <div class="reveal d3">
+          <p class="bio">Sebagai mahasiswa Teknologi Informasi Universitas Annuqayah, saya berfokus pada pengembangan web dan teknologi yang tidak hanya fungsional, tetapi juga menghadirkan pengalaman digital yang menarik dan berdampak.</p>
+          <a class="btn" href="#portfolio"><> View Projects</a>
+        </div>
+      </div>
+
+      <div class="cols">
+        <div class="reveal">
+          <h2>Education</h2>
+          <ul class="tl" id="edu"></ul>
+        </div>
+        <div class="reveal d1">
+          <h2>Experience</h2>
+          <div class="exp-scroll">
+            <ul class="tl" id="exp"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="folders reveal">
+        <div class="folder" data-tab="projects">
+          <div class="paper"><img src="images/agristeward-preview.jpg" alt="Thumbnail AgriSteward IoT"></div>
+          <div class="paper"><img src="images/sales-reporting.jpeg" alt="Thumbnail Sales Reporting"></div>
+          <div class="paper"><img src="images/panen-kita-preview.jpeg" alt="Thumbnail Aplikasi Panen Kita"></div>
+          <div class="paper"><img src="images/absensi-fingerprint.jfif" alt="Thumbnail Absensi Fingerprint"></div>
+          <div class="front">
+            <div><b id="cP">0</b><span>Projects</span></div>
+            <span class="dots">•••</span>
+          </div>
+        </div>
+        <div class="folder" data-tab="certificates">
+          <div class="paper"><img src="images/certificate-design-graphic.jpeg" alt="Sertifikat Pemateri Desain Grafis"></div>
+          <div class="paper"><img src="images/certificate-business-plan.jpeg" alt="Sertifikat Business Plan Competition"></div>
+          <div class="paper"><img src="images/certificate-ui-ux.jpeg" alt="Sertifikat Lomba UI/UX Nasional"></div>
+          <div class="paper"><img src="images/certificate-lks-network-administration-2025.png" alt="Piagam penghargaan peserta LKS Network System Administration Jawa Timur 2025"></div>
+          <div class="front">
+            <div><b id="cC">0</b><span>Certificates</span></div>
+            <span class="dots">•••</span>
+          </div>
+        </div>
+        <div class="folder" data-tab="awards">
+          <div class="paper"><img src="images/award-appreciation.jpeg" alt="Certificate of Appreciation"></div>
+          <div class="paper"><img src="images/award-uiux-course.jpeg" alt="UI/UX Course Award"></div>
+          <div class="paper"><img src="images/award-excellence.jpeg" alt="Certificate of Excellence"></div>
+          <div class="paper"><img src="images/award-workshop-speaker.jpeg" alt="Penghargaan Narasumber"></div>
+          <div class="front">
+            <div><b id="cA">0</b><span>Awards</span></div>
+            <span class="dots">•••</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TRANSISI ZOOM-THROUGH PORTOFOLIO (GELAP KE TERANG) -->
+  <section class="portal-wrap contour" id="portalWrap">
+    <div class="portal-sticky">
+      <h2 class="portal-title" id="portalTitle">PORTOFOLIO</h2>
+    </div>
+  </section>
+
+  <!-- 4. PORTOFOLIO (TERANG) -->
+  <section id="portfolio" class="light contour">
+    <div class="wrap reveal">
+      <div class="tabs" role="tablist">
+        <button class="on" data-tab="projects" role="tab"><> Projects</button>
+        <button data-tab="certificates" role="tab">Certificates</button>
+        <button data-tab="awards" role="tab">Awards</button>
+      </div>
+    </div>
+    <div class="car reveal d1">
+      <button class="arr l" aria-label="Sebelumnya">‹</button>
+      <div class="track" id="track"></div>
+      <button class="arr r" aria-label="Berikutnya">›</button>
+    </div>
+  </section>
+
+  <!-- 5. TRANSISI TEROWONGAN FOTO KEGIATAN (00:34 - 00:36) -->
+  <section class="tunnel-wrap light contour" id="tunnelWrap">
+    <div class="tunnel-sticky">
+      <div class="tunnel-stage" id="tunnelStage"></div>
+      <span class="scroll-hint">Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- 6. KONTAK -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2 class="contact-title reveal">Hubungi Saya</h2>
+      <div class="cgrid">
+        <div class="reveal">
+          <div class="box">
+            <h3>Hubungi Saya</h3>
+            <p class="s">Ada yang mau didiskusikan? Langsung kirim pesan aja ya..</p>
+            <form id="msgForm">
+              <label for="n1">Nama</label><input id="n1" required placeholder="Nama Anda">
+              <label for="e1">Email</label><input id="e1" type="email" required placeholder="Email Anda">
+              <label for="m1">Pesan</label><textarea id="m1" required placeholder="Pesan Anda"></textarea>
+              <button class="btn" type="submit">➤ Kirim Pesan</button>
+            </form>
+          </div>
+          <div class="box find">
+            <h3>Find Me</h3>
+            <a href="https://instagram.com/abd_alaaa" target="_blank" rel="noopener"><span class="ic" style="background:linear-gradient(45deg,#f9a03c,#e1306c,#833ab4)">IG</span><span>Instagram<small>@abd_alaaa</small></span></a>
+            <a href="https://github.com/ala007519-bot" target="_blank" rel="noopener"><span class="ic" style="background:#111">GH</span><span>GitHub<small>@ala007519-bot</small></span></a>
+          </div>
+          <div class="side-photo">
+            <img src="images/contact-side-photo.png" alt="Foto A’la">
+            <p>Thank you for visiting my portfolio.</p>
+          </div>
+        </div>
+
+        <div class="reveal d1">
+          <div class="box">
+            <h3>Tinggalkan Komentar</h3>
+            <form id="cmForm">
+              <label for="n2">Nama</label><input id="n2" required placeholder="Masukkan nama kamu">
+              <label for="c2">Komentar</label><textarea id="c2" required placeholder="Tulis komentar kamu di sini..."></textarea>
+              <label for="p2">Foto Profil (opsional)</label><input id="p2" type="file" accept="image/*">
+              <small style="color:#98a2b3;font-size:.72rem">Maks. ukuran file 5MB</small>
+              <button class="btn" type="submit">➤ Kirim Komentar</button>
+            </form>
+          </div>
+          <div class="box">
+            <h3> Komentar (<span id="cc" style="color:var(--blue)">0</span>)</h3>
+            <div class="cm-list" id="cms"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>© 2026 A’la · Dibuat dengan HTML, CSS & JavaScript</footer>
+
+  <script src="data.js?v=26"></script>
+  <script src="script.js?v=22"></script>
+</body>
+</html>
