@@ -84,12 +84,12 @@ section{position:relative}
   from{background-position:0 0}
   to{background-position:700px 350px}
 }
-.about::before{content:"";position:absolute;z-index:0;inset:-12% -18%;pointer-events:none;
+.about::before{content:"";position:absolute;z-index:0;inset:-12% 0;pointer-events:none;
   background:radial-gradient(ellipse at 24% 35%,rgba(38,113,196,.13),transparent 30%),radial-gradient(ellipse at 76% 68%,rgba(91,67,180,.10),transparent 32%);
   animation:aboutAmbientDrift 12s ease-in-out infinite alternate}
 @keyframes aboutAmbientDrift{
-  from{transform:translate3d(-2%,1%,0) scale(.96)}
-  to{transform:translate3d(2%,-1%,0) scale(1.05)}
+  from{transform:translate3d(0,1%,0) scaleY(.96)}
+  to{transform:translate3d(0,-1%,0) scaleY(1.05)}
 }
 .about>.wrap{position:relative;z-index:1}
 .sec-heading{text-align:center;font-size:clamp(2.4rem,5.5vw,4rem);font-weight:900;margin-bottom:60px;letter-spacing:-.02em}
@@ -232,7 +232,7 @@ section{position:relative}
 .tabs{display:flex;gap:6px;width:max-content;max-width:100%;margin:0 auto 44px;padding:6px;border-radius:18px;
   background:rgba(255,255,255,.52);-webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);
   box-shadow:0 14px 36px rgba(16,24,40,.1),inset 0 1px 1px rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.82)}
-.tabs button{flex:1;min-width:135px;padding:13px 20px;border:1px solid transparent;border-radius:12px;background:rgba(255,255,255,.18);
+.tabs button{flex:1;min-width:0;padding:13px 20px;border:1px solid transparent;border-radius:12px;background:rgba(255,255,255,.18);
   -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#475467;font-weight:700;font-size:.84rem;transition:all .2s}
 .tabs button:hover{color:var(--ink)}
 .tabs button.on{background:linear-gradient(135deg,rgba(100,145,255,.72),rgba(47,95,224,.56));
@@ -304,7 +304,7 @@ section{position:relative}
 }
 @keyframes contactGlowFloat{
   from{transform:translate(0,0) scale(.9)}
-  to{transform:translate(80vw,22vh) scale(1.18)}
+  to{transform:translate(40vw,22vh) scale(1.18)}
 }
 .contact>.wrap{position:relative;z-index:1}
 .contact-title{text-align:center;font-size:clamp(2.6rem,6vw,4.4rem);font-weight:900;color:#dfe8f7;opacity:.92;margin-bottom:44px;letter-spacing:-.02em;text-shadow:0 10px 30px rgba(0,0,0,.35)}
@@ -359,21 +359,53 @@ footer{position:relative;z-index:3;background:rgba(6,11,23,.82);-webkit-backdrop
   .hero{grid-template-columns:1fr;text-align:center}
   .photo{max-width:290px;margin:auto;order:-1}
   .cols,.cgrid,.folders{grid-template-columns:1fr}
+  .cols{gap:40px;margin-top:80px}
+  .folders{margin-top:100px;gap:64px}
   .nav a{padding:8px 14px;font-size:.75rem}
+  .home{background-attachment:scroll}
   .arr{display:none}
   .t-card{width:150px}
   .t-card:nth-child(1){transform:translate(-110px,-60px) rotate(-8deg)}
   .t-card:nth-child(3){transform:translate(110px,-40px) rotate(7deg)}
 }
 @media(max-width:520px){
+  .wrap{padding-inline:18px}
+  .welcome-banner{padding:17vh 16px 0}
+  .welcome-banner h1{font-size:clamp(1.9rem,9.5vw,2.8rem);line-height:1.08}
+  .portal-title{font-size:clamp(2.6rem,12vw,4.5rem)}
+  .nav{max-width:calc(100vw - 24px);gap:2px;padding:4px}
+  .nav a{padding:7px 6px;font-size:.66rem}
+  .tabs{width:100%;gap:4px;margin-bottom:32px;padding:5px}
+  .tabs button{min-width:0;padding:11px 6px;font-size:.72rem;white-space:nowrap}
+  .tl .row{align-items:flex-start;flex-wrap:wrap}
+  .tl .org{flex:1 1 155px;min-width:0}
+  .tl .org span:last-child{overflow-wrap:anywhere}
+  .tl .yr{margin-left:36px}
+  .t-card{width:clamp(112px,36vw,140px)}
+  .t-card:nth-child(1){transform:translate(-72px,-60px) rotate(-8deg)}
+  .t-card:nth-child(3){transform:translate(72px,-40px) rotate(7deg)}
+  .t-card:nth-child(4){transform:translate(-46px,88px) rotate(-4deg)}
+  .t-card:nth-child(5){transform:translate(58px,96px) rotate(-6deg)}
   .side-photo{min-height:140px;padding:8px;gap:10px}
   .side-photo img{width:36%;height:120px}
   .side-photo p{font-size:.82rem}
   .contact::after{width:90%;height:60%}
   @keyframes contactGlowFloat{
     from{transform:translate(0,0) scale(.9)}
-    to{transform:translate(55vw,18vh) scale(1.12)}
+    to{transform:translate(20vw,18vh) scale(1.12)}
   }
+}
+@media(max-width:360px){
+  .tabs button{padding-inline:4px;font-size:.66rem}
+}
+@media(min-width:521px){
+  .tabs button{min-width:135px}
+}
+@media(min-width:861px) and (max-width:1200px) and (max-height:600px){
+  .home{height:125vh;background-attachment:scroll}
+  .welcome-banner{padding-top:9vh}
+  .welcome-banner h1{font-size:clamp(2.6rem,6.8vw,5rem)}
+  .nav{top:12px}
 }
 @media(prefers-reduced-motion:reduce){
   *{transition:none!important;animation-duration:.01ms!important;scroll-behavior:auto!important}
